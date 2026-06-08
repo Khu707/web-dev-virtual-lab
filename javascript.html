@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Basics | Web Dev Virtual Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-image">
+
+    <img
+    src="logo.svg"
+    alt="Web Dev Logo">
+
+</div>
+
+            <h2>WEB DEV</h2>
+
+            <p>Virtual Lab</p>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="index.html">🏠 Home</a></li>
+
+                <li><a href="intro.html">📖 Introduction</a></li>
+
+                <li><a href="html.html">🌐 HTML Basics</a></li>
+
+                <li><a href="css.html">🎨 CSS Basics</a></li>
+
+                <li class="active">
+                    <a href="javascript.html">
+                        ⚡ JavaScript
+                    </a>
+                </li>
+
+                <li><a href="playground.html">💻 Playground</a></li>
+
+                <li><a href="quiz.html">❓ Quiz</a></li>
+
+                <li><a href="about.html">👩 About</a></li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <h1>JavaScript Basics</h1>
+
+            <p>
+                Make your webpages interactive.
+            </p>
+
+        </header>
+
+        <!-- Intro -->
+
+        <section class="lesson-card">
+
+            <h2>What is JavaScript?</h2>
+
+            <p>
+
+                JavaScript is a programming language
+                that adds functionality to websites.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                It can respond to button clicks,
+                validate forms, create animations,
+                and update webpage content.
+
+            </p>
+
+        </section>
+
+        <!-- Variables -->
+
+        <section class="lesson-card">
+
+            <h2>Variables</h2>
+
+            <p>
+
+                Variables store information.
+
+            </p>
+
+            <div class="code-box">
+
+let name = "Khushboo";
+
+let age = 21;
+
+            </div>
+
+        </section>
+
+        <!-- Functions -->
+
+        <section class="lesson-card">
+
+            <h2>Functions</h2>
+
+            <p>
+
+                Functions allow us to reuse code.
+
+            </p>
+
+            <div class="code-box">
+
+function greet(){
+
+alert("Welcome!");
+
+}
+
+            </div>
+
+        </section>
+
+        <!-- Example -->
+
+        <section class="lesson-card">
+
+            <h2>Interactive Example</h2>
+
+            <p>
+
+                Click the button below.
+
+            </p>
+
+            <br>
+
+            <button class="run-btn"
+            onclick="welcome()">
+
+                Click Me
+
+            </button>
+
+        </section>
+
+        <!-- Playground -->
+
+        <section class="lesson-card">
+
+            <h2>Try It Yourself</h2>
+
+            <p>
+
+                Edit the JavaScript below.
+
+            </p>
+
+            <br>
+
+<textarea id="editor">
+
+<button onclick="sayHello()">
+Click Here
+</button>
+
+<script>
+
+function sayHello(){
+
+alert("Hello World!");
+
+}
+
+</script>
+
+</textarea>
+
+            <button class="run-btn"
+            onclick="runCode()">
+
+                Run Code
+
+            </button>
+
+            <iframe id="output"></iframe>
+
+        </section>
+
+        <!-- Quiz -->
+
+        <section class="quiz-box">
+
+            <h2>Mini Quiz</h2>
+
+            <p>
+
+                Which keyword creates
+                a variable?
+
+            </p>
+
+            <br>
+
+            <label>
+
+                <input type="radio"
+                name="jsquiz"
+                value="a">
+
+                let
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                name="jsquiz"
+                value="b">
+
+                img
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                name="jsquiz"
+                value="c">
+
+                style
+
+            </label>
+
+            <button class="submit-btn"
+            onclick="checkJSQuiz()">
+
+                Submit
+
+            </button>
+
+            <p id="result"></p>
+
+        </section>
+
+        <!-- Next -->
+
+        <section class="lesson-card"
+        style="text-align:center;">
+
+            <h2>
+
+                Congratulations!
+
+            </h2>
+
+            <p>
+
+                You now know the basics of
+                HTML, CSS and JavaScript.
+
+            </p>
+
+            <br>
+
+            <a href="playground.html">
+
+                <button>
+
+                    Open Playground →
+
+                </button>
+
+            </a>
+
+        </section>
+
+        <footer>
+
+            <p>
+
+                Web Dev Virtual Lab © 2026
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script>
+
+function welcome(){
+
+alert(
+"Welcome to JavaScript!"
+);
+
+}
+
+function runCode(){
+
+let code =
+document.getElementById(
+"editor"
+).value;
+
+document.getElementById(
+"output"
+).srcdoc = code;
+
+}
+
+function checkJSQuiz(){
+
+let ans =
+document.querySelector(
+'input[name="jsquiz"]:checked'
+);
+
+if(!ans){
+
+document.getElementById(
+"result"
+).innerHTML =
+"Please select an option.";
+
+return;
+
+}
+
+if(ans.value=="a"){
+
+document.getElementById(
+"result"
+).innerHTML =
+"✅ Correct! 'let' creates a variable.";
+
+}
+
+else{
+
+document.getElementById(
+"result"
+).innerHTML =
+"❌ Incorrect. Try again.";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

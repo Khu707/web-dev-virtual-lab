@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Basics | Web Dev Virtual Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-image">
+
+    <img
+    src="logo.svg"
+    alt="Web Dev Logo">
+
+</div>
+
+            <h2>WEB DEV</h2>
+
+            <p>Virtual Lab</p>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        🏠 Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="intro.html">
+                        📖 Introduction
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="html.html">
+                        🌐 HTML Basics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="css.html">
+                        🎨 CSS Basics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript.html">
+                        ⚡ JavaScript
+                    </a>
+                </li>
+
+                <li>
+                    <a href="playground.html">
+                        💻 Playground
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">
+                        ❓ Quiz
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        👩 About
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <h1>HTML Basics</h1>
+
+            <p>
+                Learn the building blocks of every webpage.
+            </p>
+
+        </header>
+
+        <!-- Section 1 -->
+
+        <section class="lesson-card">
+
+            <h2>What is HTML?</h2>
+
+            <p>
+
+                HTML stands for
+                <strong>HyperText Markup Language</strong>.
+
+                It is used to create the structure
+                of websites.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Think of HTML as the skeleton of a human body.
+
+                CSS adds beauty,
+                and JavaScript adds movement.
+
+            </p>
+
+        </section>
+
+        <!-- Section 2 -->
+
+        <section class="lesson-card">
+
+            <h2>Basic HTML Structure</h2>
+
+            <div class="code-box">
+
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+
+    &lt;p&gt;My first webpage.&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+            </div>
+
+        </section>
+
+        <!-- Section 3 -->
+
+        <section class="lesson-card">
+
+            <h2>Important HTML Tags</h2>
+
+            <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+
+                <tr style="background:#2563eb; color:white;">
+
+                    <th style="padding:12px;">
+                        Tag
+                    </th>
+
+                    <th style="padding:12px;">
+                        Purpose
+                    </th>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:10px; border:1px solid #ddd;">
+                        &lt;h1&gt;
+                    </td>
+
+                    <td style="padding:10px; border:1px solid #ddd;">
+                        Main Heading
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:10px; border:1px solid #ddd;">
+                        &lt;p&gt;
+                    </td>
+
+                    <td style="padding:10px; border:1px solid #ddd;">
+                        Paragraph
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:10px; border:1px solid #ddd;">
+                        &lt;a&gt;
+                    </td>
+
+                    <td style="padding:10px; border:1px solid #ddd;">
+                        Hyperlink
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:10px; border:1px solid #ddd;">
+                        &lt;img&gt;
+                    </td>
+
+                    <td style="padding:10px; border:1px solid #ddd;">
+                        Image
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:10px; border:1px solid #ddd;">
+                        &lt;ul&gt;
+                    </td>
+
+                    <td style="padding:10px; border:1px solid #ddd;">
+                        Unordered List
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- Example -->
+
+        <section class="lesson-card">
+
+            <h2>Example</h2>
+
+            <div class="code-box">
+
+&lt;h1&gt;Welcome&lt;/h1&gt;
+
+&lt;p&gt;I am learning HTML.&lt;/p&gt;
+
+            </div>
+
+            <br>
+
+            <h3>Output</h3>
+
+            <br>
+
+            <div style="
+            background:white;
+            padding:20px;
+            border:1px solid #ddd;
+            border-radius:10px;">
+
+                <h1>Welcome</h1>
+
+                <p>I am learning HTML.</p>
+
+            </div>
+
+        </section>
+
+        <!-- Practice -->
+
+        <section class="lesson-card">
+
+            <h2>Try It Yourself</h2>
+
+            <p>
+
+                Edit the code below and click
+                <strong>Run Code</strong>.
+
+            </p>
+
+            <br>
+
+            <textarea id="editor">
+
+<h1>Hello World</h1>
+
+<p>My first webpage.</p>
+
+            </textarea>
+
+            <button class="run-btn"
+            onclick="runCode()">
+
+                Run Code
+
+            </button>
+
+            <iframe id="output"></iframe>
+
+        </section>
+
+        <!-- Small Quiz -->
+
+        <section class="quiz-box">
+
+            <h2>Mini Quiz</h2>
+
+            <p>
+
+                Which tag is used to create
+                a paragraph?
+
+            </p>
+
+            <br>
+
+            <label>
+                <input type="radio"
+                name="htmlquiz"
+                value="a">
+
+                &lt;div&gt;
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                name="htmlquiz"
+                value="b">
+
+                &lt;p&gt;
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                name="htmlquiz"
+                value="c">
+
+                &lt;img&gt;
+
+            </label>
+
+            <button class="submit-btn"
+            onclick="checkHTMLQuiz()">
+
+                Submit
+
+            </button>
+
+            <p id="result"></p>
+
+        </section>
+
+        <!-- Next -->
+
+        <section class="lesson-card"
+        style="text-align:center;">
+
+            <h2>
+
+                Great! Now let's learn CSS.
+
+            </h2>
+
+            <br>
+
+            <a href="css.html">
+
+                <button>
+
+                    Next →
+                    CSS Basics
+
+                </button>
+
+            </a>
+
+        </section>
+
+        <footer>
+
+            <p>
+
+                Web Dev Virtual Lab © 2026
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script>
+
+function runCode(){
+
+let code =
+document.getElementById(
+"editor"
+).value;
+
+document.getElementById(
+"output"
+).srcdoc = code;
+
+}
+
+function checkHTMLQuiz(){
+
+let ans =
+document.querySelector(
+'input[name="htmlquiz"]:checked'
+);
+
+if(!ans){
+
+document.getElementById(
+"result"
+).innerHTML =
+"Please choose an option.";
+
+return;
+
+}
+
+if(ans.value=="b"){
+
+document.getElementById(
+"result"
+).innerHTML =
+"✅ Correct! The &lt;p&gt; tag creates a paragraph.";
+
+}
+
+else{
+
+document.getElementById(
+"result"
+).innerHTML =
+"❌ Incorrect. Try again.";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

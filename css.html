@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Basics | Web Dev Virtual Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+           <div class="logo-image">
+
+    <img
+    src="logo.svg"
+    alt="Web Dev Logo">
+
+       </div>
+
+            <h2>WEB DEV</h2>
+
+            <p>Virtual Lab</p>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="index.html">🏠 Home</a></li>
+
+                <li><a href="intro.html">📖 Introduction</a></li>
+
+                <li><a href="html.html">🌐 HTML Basics</a></li>
+
+                <li class="active">
+                    <a href="css.html">🎨 CSS Basics</a>
+                </li>
+
+                <li><a href="javascript.html">⚡ JavaScript</a></li>
+
+                <li><a href="playground.html">💻 Playground</a></li>
+
+                <li><a href="quiz.html">❓ Quiz</a></li>
+
+                <li><a href="about.html">👩 About</a></li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- Content -->
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <h1>CSS Basics</h1>
+
+            <p>
+                Learn how to style your webpages.
+            </p>
+
+        </header>
+
+        <!-- What is CSS -->
+
+        <section class="lesson-card">
+
+            <h2>What is CSS?</h2>
+
+            <p>
+
+                CSS stands for
+                <strong>Cascading Style Sheets</strong>.
+
+                It controls the appearance of a webpage.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                HTML builds the structure,
+                while CSS makes it beautiful.
+
+            </p>
+
+        </section>
+
+        <!-- Syntax -->
+
+        <section class="lesson-card">
+
+            <h2>CSS Syntax</h2>
+
+            <div class="code-box">
+
+h1{
+
+    color: blue;
+
+    font-size: 40px;
+
+}
+
+            </div>
+
+            <br>
+
+            <p>
+
+                Here:
+
+            </p>
+
+            <ul style="margin-left:25px; line-height:2;">
+
+                <li>h1 → Selector</li>
+
+                <li>color → Property</li>
+
+                <li>blue → Value</li>
+
+            </ul>
+
+        </section>
+
+        <!-- Common Properties -->
+
+        <section class="lesson-card">
+
+            <h2>Common CSS Properties</h2>
+
+            <table style="width:100%; border-collapse:collapse;">
+
+                <tr style="background:#2563eb;color:white;">
+
+                    <th style="padding:12px;">Property</th>
+
+                    <th style="padding:12px;">Purpose</th>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:10px;border:1px solid #ddd;">
+                        color
+                    </td>
+
+                    <td style="padding:10px;border:1px solid #ddd;">
+                        Changes text color
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:10px;border:1px solid #ddd;">
+                        background
+                    </td>
+
+                    <td style="padding:10px;border:1px solid #ddd;">
+                        Background color
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:10px;border:1px solid #ddd;">
+                        font-size
+                    </td>
+
+                    <td style="padding:10px;border:1px solid #ddd;">
+                        Changes text size
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:10px;border:1px solid #ddd;">
+                        border
+                    </td>
+
+                    <td style="padding:10px;border:1px solid #ddd;">
+                        Adds border
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- Example -->
+
+        <section class="lesson-card">
+
+            <h2>Example</h2>
+
+            <div class="code-box">
+
+&lt;style&gt;
+
+h1{
+color:red;
+}
+
+&lt;/style&gt;
+
+&lt;h1&gt;
+
+Hello CSS
+
+&lt;/h1&gt;
+
+            </div>
+
+            <br>
+
+            <h3>Output</h3>
+
+            <br>
+
+            <div style="
+            padding:20px;
+            border:1px solid #ddd;
+            border-radius:10px;">
+
+                <h1 style="color:red;">
+                    Hello CSS
+                </h1>
+
+            </div>
+
+        </section>
+
+        <!-- Practice -->
+
+        <section class="lesson-card">
+
+            <h2>Try It Yourself</h2>
+
+            <p>
+
+                Change the color or font size
+                and click Run Code.
+
+            </p>
+
+            <br>
+
+<textarea id="editor">
+
+<style>
+
+h1{
+color:blue;
+}
+
+</style>
+
+<h1>Hello CSS</h1>
+
+</textarea>
+
+            <button class="run-btn"
+            onclick="runCode()">
+
+                Run Code
+
+            </button>
+
+            <iframe id="output"></iframe>
+
+        </section>
+
+        <!-- Quiz -->
+
+        <section class="quiz-box">
+
+            <h2>Mini Quiz</h2>
+
+            <p>
+
+                Which property changes
+                the text color?
+
+            </p>
+
+            <br>
+
+            <label>
+
+                <input type="radio"
+                name="cssquiz"
+                value="a">
+
+                background
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                name="cssquiz"
+                value="b">
+
+                color
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                name="cssquiz"
+                value="c">
+
+                width
+
+            </label>
+
+            <button class="submit-btn"
+            onclick="checkCSSQuiz()">
+
+                Submit
+
+            </button>
+
+            <p id="result"></p>
+
+        </section>
+
+        <!-- Next -->
+
+        <section class="lesson-card"
+        style="text-align:center;">
+
+            <h2>
+
+                Awesome! Let's make
+                websites interactive.
+
+            </h2>
+
+            <br>
+
+            <a href="javascript.html">
+
+                <button>
+
+                    Next →
+                    JavaScript Basics
+
+                </button>
+
+            </a>
+
+        </section>
+
+        <footer>
+
+            <p>
+
+                Web Dev Virtual Lab © 2026
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script>
+
+function runCode(){
+
+let code =
+document.getElementById(
+"editor"
+).value;
+
+document.getElementById(
+"output"
+).srcdoc = code;
+
+}
+
+function checkCSSQuiz(){
+
+let ans =
+document.querySelector(
+'input[name="cssquiz"]:checked'
+);
+
+if(!ans){
+
+document.getElementById(
+"result"
+).innerHTML =
+"Please select an option.";
+
+return;
+
+}
+
+if(ans.value=="b"){
+
+document.getElementById(
+"result"
+).innerHTML =
+"✅ Correct! The color property changes text color.";
+
+}
+
+else{
+
+document.getElementById(
+"result"
+).innerHTML =
+"❌ Incorrect. Try again.";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

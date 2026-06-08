@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Quiz | Web Dev Virtual Lab</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<div class="logo-image">
+
+    <img
+    src="logo.svg"
+    alt="Web Dev Logo">
+
+</div>
+
+<h2>WEB DEV</h2>
+
+<p>Virtual Lab</p>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">🏠 Home</a></li>
+
+<li><a href="intro.html">📖 Introduction</a></li>
+
+<li><a href="html.html">🌐 HTML Basics</a></li>
+
+<li><a href="css.html">🎨 CSS Basics</a></li>
+
+<li><a href="javascript.html">⚡ JavaScript</a></li>
+
+<li><a href="playground.html">💻 Playground</a></li>
+
+<li class="active">
+<a href="quiz.html">
+❓ Quiz
+</a>
+</li>
+
+<li><a href="about.html">👩 About</a></li>
+
+</ul>
+
+</nav>
+
+</aside>
+
+<!-- Main Content -->
+
+<main class="content">
+
+<header class="topbar">
+
+<h1>Web Development Quiz</h1>
+
+<p>
+
+Test your understanding of
+HTML, CSS and JavaScript.
+
+</p>
+
+</header>
+
+<div class="quiz-box">
+
+<h2>Question 1</h2>
+
+<p>
+Which HTML tag creates the largest heading?
+</p>
+
+<label>
+<input type="radio"
+name="q1"
+value="a">
+&lt;h6&gt;
+</label>
+
+<label>
+<input type="radio"
+name="q1"
+value="b">
+&lt;h1&gt;
+</label>
+
+<label>
+<input type="radio"
+name="q1"
+value="c">
+&lt;p&gt;
+</label>
+
+</div>
+
+<div class="quiz-box">
+
+<h2>Question 2</h2>
+
+<p>
+
+Which CSS property changes
+text color?
+
+</p>
+
+<label>
+<input type="radio"
+name="q2"
+value="a">
+background
+</label>
+
+<label>
+<input type="radio"
+name="q2"
+value="b">
+color
+</label>
+
+<label>
+<input type="radio"
+name="q2"
+value="c">
+width
+</label>
+
+</div>
+
+<div class="quiz-box">
+
+<h2>Question 3</h2>
+
+<p>
+
+Which language makes a webpage
+interactive?
+
+</p>
+
+<label>
+<input type="radio"
+name="q3"
+value="a">
+HTML
+</label>
+
+<label>
+<input type="radio"
+name="q3"
+value="b">
+CSS
+</label>
+
+<label>
+<input type="radio"
+name="q3"
+value="c">
+JavaScript
+</label>
+
+</div>
+
+<div class="quiz-box">
+
+<h2>Question 4</h2>
+
+<p>
+
+Which keyword is used to create
+a variable?
+
+</p>
+
+<label>
+<input type="radio"
+name="q4"
+value="a">
+let
+</label>
+
+<label>
+<input type="radio"
+name="q4"
+value="b">
+style
+</label>
+
+<label>
+<input type="radio"
+name="q4"
+value="c">
+table
+</label>
+
+</div>
+
+<div class="quiz-box">
+
+<h2>Question 5</h2>
+
+<p>
+
+Which HTML tag creates a hyperlink?
+
+</p>
+
+<label>
+<input type="radio"
+name="q5"
+value="a">
+&lt;img&gt;
+</label>
+
+<label>
+<input type="radio"
+name="q5"
+value="b">
+&lt;a&gt;
+</label>
+
+<label>
+<input type="radio"
+name="q5"
+value="c">
+&lt;div&gt;
+</label>
+
+<br><br>
+
+<button class="submit-btn"
+onclick="checkQuiz()">
+
+Submit Quiz
+
+</button>
+
+</div>
+
+<div class="lesson-card"
+style="text-align:center;">
+
+<h2>Your Score</h2>
+
+<p id="result"
+style="font-size:22px;
+margin-top:15px;">
+
+0 / 5
+
+</p>
+
+</div>
+
+<div class="lesson-card"
+style="text-align:center;">
+
+<h2>
+
+Excellent!
+
+</h2>
+
+<p>
+
+Keep practicing in the
+Playground to improve your
+skills.
+
+</p>
+
+<br>
+
+<a href="about.html">
+
+<button>
+
+Next →
+About Project
+
+</button>
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+Web Dev Virtual Lab © 2026
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script>
+
+function checkQuiz(){
+
+let score = 0;
+
+let q1 =
+document.querySelector(
+'input[name="q1"]:checked'
+);
+
+let q2 =
+document.querySelector(
+'input[name="q2"]:checked'
+);
+
+let q3 =
+document.querySelector(
+'input[name="q3"]:checked'
+);
+
+let q4 =
+document.querySelector(
+'input[name="q4"]:checked'
+);
+
+let q5 =
+document.querySelector(
+'input[name="q5"]:checked'
+);
+
+if(q1 && q1.value=="b"){
+score++;
+}
+
+if(q2 && q2.value=="b"){
+score++;
+}
+
+if(q3 && q3.value=="c"){
+score++;
+}
+
+if(q4 && q4.value=="a"){
+score++;
+}
+
+if(q5 && q5.value=="b"){
+score++;
+}
+
+let message="";
+
+if(score==5){
+
+message =
+"🏆 Outstanding!<br>Score : 5 / 5";
+
+}
+
+else if(score>=3){
+
+message =
+"✅ Good Job!<br>Score : "
++ score + " / 5";
+
+}
+
+else{
+
+message =
+"📚 Keep Learning!<br>Score : "
++ score + " / 5";
+
+}
+
+document.getElementById(
+"result"
+).innerHTML = message;
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>

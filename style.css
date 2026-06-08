@@ -1,0 +1,548 @@
+/* ===========================
+   WEB DEV VIRTUAL LAB
+   Designed by Khushboo Khobragade
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fc;
+    color:#334155;
+}
+
+/* ===========================
+   MAIN LAYOUT
+=========================== */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+    width:260px;
+    background:#1e293b;
+    color:white;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    overflow-y:auto;
+    box-shadow:3px 0 15px rgba(0,0,0,.15);
+}
+
+.logo{
+    text-align:center;
+    padding:35px 20px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.logo-icon{
+    width:75px;
+    height:75px;
+    background:#2563eb;
+    border-radius:18px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.logo h2{
+    font-size:24px;
+    letter-spacing:1px;
+}
+
+.logo p{
+    color:#cbd5e1;
+    margin-top:5px;
+    font-size:14px;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.sidebar nav{
+    margin-top:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin:8px 12px;
+}
+
+.sidebar a{
+    display:block;
+    text-decoration:none;
+    color:#e2e8f0;
+    padding:14px 18px;
+    border-radius:10px;
+    transition:.3s;
+    font-size:15px;
+}
+
+.sidebar a:hover{
+    background:#2563eb;
+    transform:translateX(5px);
+}
+
+.active a{
+    background:#2563eb;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.content{
+    margin-left:260px;
+    width:calc(100% - 260px);
+    padding:35px;
+}
+
+/* ===========================
+   TOPBAR
+=========================== */
+
+.topbar{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+.topbar h1{
+    font-size:28px;
+    color:#1e293b;
+}
+
+.topbar p{
+    margin-top:8px;
+    color:#64748b;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+    margin-top:30px;
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    color:white;
+    padding:60px 40px;
+    border-radius:18px;
+}
+
+.hero h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.hero button{
+    margin-top:30px;
+    background:white;
+    color:#2563eb;
+    border:none;
+    padding:14px 30px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.hero button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:35px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.card p{
+    line-height:1.7;
+    color:#64748b;
+}
+
+/* ===========================
+   ROADMAP
+=========================== */
+
+.roadmap{
+    margin-top:40px;
+}
+
+.roadmap h2{
+    margin-bottom:20px;
+    color:#1e293b;
+}
+
+.roadmap-box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+.step{
+    padding:18px;
+    margin:12px 0;
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.step:hover{
+    transform:translateX(8px);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    margin-top:50px;
+    text-align:center;
+    color:#64748b;
+    padding:20px;
+}
+
+/* ===========================
+   LESSON PAGES
+=========================== */
+
+.lesson-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+    margin-top:30px;
+}
+
+.lesson-card h2{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.lesson-card p{
+    line-height:1.8;
+}
+
+.code-box{
+    margin-top:20px;
+    background:#0f172a;
+    color:#22c55e;
+    padding:20px;
+    border-radius:10px;
+    overflow:auto;
+    font-family:Consolas,monospace;
+}
+
+/* ===========================
+   PLAYGROUND
+=========================== */
+
+textarea{
+    width:100%;
+    height:220px;
+    padding:15px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    resize:vertical;
+    font-family:Consolas;
+    font-size:15px;
+}
+
+.run-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    margin-top:15px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.run-btn:hover{
+    background:#1d4ed8;
+}
+
+iframe{
+    width:100%;
+    height:250px;
+    margin-top:20px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    background:white;
+}
+
+/* ===========================
+   QUIZ
+=========================== */
+
+.quiz-box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-top:30px;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+.quiz-box h2{
+    margin-bottom:15px;
+}
+
+.quiz-box label{
+    display:block;
+    margin:15px 0;
+}
+
+.submit-btn{
+    background:#16a34a;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#15803d;
+}
+
+#result{
+    margin-top:20px;
+    font-weight:600;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.sidebar{
+    width:220px;
+}
+
+.content{
+    margin-left:220px;
+    width:calc(100% - 220px);
+}
+
+.hero h2{
+    font-size:32px;
+}
+
+}
+
+@media(max-width:700px){
+
+.container{
+    flex-direction:column;
+}
+
+.sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+}
+
+.content{
+    margin-left:0;
+    width:100%;
+    padding:20px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.hero{
+    padding:40px 25px;
+}
+
+.hero h2{
+    font-size:28px;
+}
+
+.topbar h1{
+    font-size:22px;
+}
+
+}textarea{
+width:100%;
+height:180px;
+padding:15px;
+border:1px solid #d1d5db;
+border-radius:10px;
+font-family:Consolas;
+font-size:15px;
+resize:vertical;
+background:white;
+}
+
+.run-btn{
+padding:12px 22px;
+margin:8px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+.run-btn:hover{
+transform:translateY(-2px);
+}
+
+iframe{
+width:100%;
+height:300px;
+border:1px solid #ddd;
+border-radius:10px;
+background:white;
+}
+
+.quiz-box label{
+display:block;
+padding:10px;
+margin:8px 0;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+.quiz-box label:hover{
+background:#eff6ff;
+}
+
+.quiz-box input{
+margin-right:10px;
+}/* About Page */
+
+.developer-card{
+text-align:center;
+}
+
+.profile-circle{
+
+width:120px;
+height:120px;
+
+margin:auto;
+margin-bottom:20px;
+
+border-radius:50%;
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#60a5fa
+);
+
+color:white;
+
+font-size:42px;
+font-weight:700;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:0 8px 20px rgba(37,99,235,.3);
+
+}
+
+.role{
+
+font-size:18px;
+font-weight:600;
+color:#2563eb;
+
+}
+
+.quote-box{
+
+text-align:center;
+
+background:linear-gradient(
+135deg,
+#eff6ff,
+#dbeafe
+);
+
+}
+.logo-image{
+
+display:flex;
+justify-content:center;
+margin-bottom:15px;
+
+}
+
+.logo-image img{
+
+width:90px;
+height:90px;
+transition:.3s;
+
+}
+
+.logo-image img:hover{
+
+transform:rotate(-5deg)
+scale(1.05);
+
+}

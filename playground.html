@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Playground | Web Dev Virtual Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+           <div class="logo-image">
+
+    <img
+    src="logo.svg"
+    alt="Web Dev Logo">
+
+</div>
+            <h2>WEB DEV</h2>
+
+            <p>Virtual Lab</p>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="index.html">🏠 Home</a></li>
+
+                <li><a href="intro.html">📖 Introduction</a></li>
+
+                <li><a href="html.html">🌐 HTML Basics</a></li>
+
+                <li><a href="css.html">🎨 CSS Basics</a></li>
+
+                <li><a href="javascript.html">⚡ JavaScript</a></li>
+
+                <li class="active">
+                    <a href="playground.html">
+                        💻 Playground
+                    </a>
+                </li>
+
+                <li><a href="quiz.html">❓ Quiz</a></li>
+
+                <li><a href="about.html">👩 About</a></li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <h1>Code Playground</h1>
+
+            <p>
+
+                Practice HTML, CSS and JavaScript
+                directly in your browser.
+
+            </p>
+
+        </header>
+
+        <section class="lesson-card">
+
+            <h2>HTML</h2>
+
+<textarea id="htmlCode">
+
+<h1>Hello World</h1>
+
+<p>Welcome to Web Dev Virtual Lab.</p>
+
+</textarea>
+
+        </section>
+
+        <section class="lesson-card">
+
+            <h2>CSS</h2>
+
+<textarea id="cssCode">
+
+body{
+font-family:Arial;
+text-align:center;
+background:#f5f5f5;
+}
+
+h1{
+color:royalblue;
+}
+
+p{
+font-size:20px;
+}
+
+</textarea>
+
+        </section>
+
+        <section class="lesson-card">
+
+            <h2>JavaScript</h2>
+
+<textarea id="jsCode">
+
+console.log("Hello World");
+
+</textarea>
+
+        </section>
+
+        <section class="lesson-card">
+
+            <button class="run-btn"
+            onclick="runPlayground()">
+
+                ▶ Run Code
+
+            </button>
+
+            <button class="run-btn"
+            onclick="loadExample()">
+
+                📄 Load Example
+
+            </button>
+
+            <button class="run-btn"
+            onclick="clearEditor()">
+
+                🗑 Clear
+
+            </button>
+
+        </section>
+
+        <section class="lesson-card">
+
+            <h2>Output</h2>
+
+            <iframe id="output"></iframe>
+
+        </section>
+
+        <section class="lesson-card"
+        style="text-align:center;">
+
+            <h2>
+
+                Keep Practicing!
+
+            </h2>
+
+            <p>
+
+                The more you experiment,
+                the faster you'll learn.
+
+            </p>
+
+            <br>
+
+            <a href="quiz.html">
+
+                <button>
+
+                    Next →
+                    Take Quiz
+
+                </button>
+
+            </a>
+
+        </section>
+
+        <footer>
+
+            <p>
+
+                Web Dev Virtual Lab © 2026
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script>
+
+function runPlayground(){
+
+let html =
+document.getElementById(
+"htmlCode"
+).value;
+
+let css =
+document.getElementById(
+"cssCode"
+).value;
+
+let js =
+document.getElementById(
+"jsCode"
+).value;
+
+let output =
+
+`
+<html>
+
+<head>
+
+<style>
+
+${css}
+
+</style>
+
+</head>
+
+<body>
+
+${html}
+
+<script>
+
+${js}
+
+<\/script>
+
+</body>
+
+</html>
+
+`;
+
+document.getElementById(
+"output"
+).srcdoc = output;
+
+}
+
+function loadExample(){
+
+document.getElementById(
+"htmlCode"
+).value =
+
+`<h1>My First Project</h1>
+
+<button onclick="changeText()">
+Click Me
+</button>
+
+<p id="demo">
+Hello Student!
+</p>`;
+
+document.getElementById(
+"cssCode"
+).value =
+
+`body{
+font-family:Arial;
+text-align:center;
+background:#eef2ff;
+}
+
+h1{
+color:#2563eb;
+}
+
+button{
+padding:10px 20px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}`;
+
+document.getElementById(
+"jsCode"
+).value =
+
+`function changeText(){
+
+document.getElementById(
+"demo"
+).innerHTML =
+"Welcome to Web Dev!";
+
+}`;
+
+}
+
+function clearEditor(){
+
+document.getElementById(
+"htmlCode"
+).value = "";
+
+document.getElementById(
+"cssCode"
+).value = "";
+
+document.getElementById(
+"jsCode"
+).value = "";
+
+document.getElementById(
+"output"
+).srcdoc = "";
+
+}
+
+</script>
+
+</body>
+
+</html>
