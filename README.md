@@ -1,5 +1,5 @@
 
-# WEB DEV - # WEB DEV - Interactive Virtual Lab
+WEB DEV - Interactive Virtual Lab
 
 A beginner-friendly educational website designed to help students learn the fundamentals of web development.
 
